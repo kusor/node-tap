@@ -12,7 +12,7 @@ if (process.env.TAP || process.env.TAP_DIAG) {
   r.on("file", function (file, results, details) {
     var s = (details.ok ? "" : "not ") + "ok "+results.name
       , n = details.pass + "/" + details.testsTotal
-      , dots = new Array(Math.max(1, 40 - s.length - n.length)).join(".")
+      , dots = new Array(Math.max(1, 60 - s.length - n.length)).join(".")
     console.log("%s %s %s", s, dots, n)
     if (details.ok) {
       if (details.skip) {
